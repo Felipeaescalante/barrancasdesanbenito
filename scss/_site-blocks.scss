@@ -1048,6 +1048,9 @@
 	> .container {
 		z-index: 2;
 		position: relative;
+		width: 100%;
+		padding: 15px;
+		box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
 	}
 	h2 {
 		color: $white;
@@ -1533,35 +1536,74 @@ figure {
 
 
 
+
+
 .featured-property-half {
-	position: relative;
-	background: $white;
-	margin-top: -100px;
-	box-shadow: 0 0 20px -5px rgba($black, .1);
-	div {
-		width: 50%;
-	}
-	.image {
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-	}
-	.text {
-		padding: 100px;
-		ul {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			color: #777;
-			strong {
-				color: $black;
-				font-weight: bold;
-			}
-			li {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1);
+    margin-top: -100px;
+}
 
-				margin-bottom: 10px;
-			}
-		}
+.image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    flex: 1 1 50%;
+    min-height: 300px;
+}
 
-	}
+.text {
+    padding: 100px;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.text ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #777;
+}
+
+.text ul strong {
+    color: black;
+    font-weight: bold;
+}
+
+.text ul li {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .featured-property-half {
+        margin-top: 0;
+        flex-direction: column; /* Cambia la dirección a columna para dispositivos pequeños */
+    }
+
+    .image {
+        width: 100%;
+        min-height: 200px; /* Ajusta la altura mínima para pantallas más pequeñas */
+        order: -1; /* Mueve la imagen al inicio en pantallas pequeñas */
+    }
+
+    .text {
+        width: 100%;
+        padding: 20px; /* Reduce el padding para pantallas más pequeñas */
+    }
 }

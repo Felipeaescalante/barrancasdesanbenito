@@ -97,17 +97,36 @@
     </div>
 
 
-    <div class="container">
-      <div class="featured-property-half d-flex">
-        <div class="image" style="background-image: url('images/playachapa.jpg')"></div>
-        <div class="text">
-          <h2>En Chapadmalal</h2>
-          <p class="mb-5">Barrancas de San Benito es un lugar excepcional donde el entorno fusiona el océano, los impresionantes acantilados de Chapadmalal y las ballenas que visitan sus aguas camino al sur. Un arroyo serpenteante cruza la comunidad, que cuenta con barrancas donde se posiciona. Es un refugio para amantes del surf y la naturaleza, donde predomina un ambiente sano y deportivo, y las noches ofrecen vistas despejadas para contemplar las estrellas.</p>
-          
-          <p><a href="https://maps.app.goo.gl/uxfkNmGSMhA6d3Vv7" class="btn btn-primary px-4 py-3">Mapa</a></p>
-        </div>
+    <div class="container" style="z-index: 2; position: relative; width: 100%; padding: 15px; box-sizing: border-box;">
+      <div class="featured-property-half" style="display: flex; flex-wrap: wrap; background: white; box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1); margin-top: -100px;">
+          <div class="image" style="background-image: url('images/playachapa.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; flex: 1 1 50%; min-height: 300px;"></div>
+          <div class="text" style="padding: 100px; flex: 1 1 50%; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+              <h2>En Chapadmalal</h2>
+              <p class="mb-5">Barrancas de San Benito es un lugar excepcional donde el entorno fusiona el océano, los impresionantes acantilados de Chapadmalal y las ballenas que visitan sus aguas camino al sur. Un arroyo serpenteante cruza la comunidad, que cuenta con barrancas donde se posiciona. Es un refugio para amantes del surf y la naturaleza, donde predomina un ambiente sano y deportivo, y las noches ofrecen vistas despejadas para contemplar las estrellas.</p>
+              <p><a href="https://maps.app.goo.gl/uxfkNmGSMhA6d3Vv7" class="btn btn-primary" style="background-color: #007bff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; text-align: center; display: inline-block;">Mapa</a></p>
+          </div>
       </div>
-    </div>
+  </div>
+  <style>
+      /* Media Queries para dispositivos móviles */
+      @media (max-width: 768px) {
+          .featured-property-half {
+              flex-direction: column !important; /* Cambia la dirección a columna para dispositivos pequeños */
+              margin-top: 0 !important;
+          }
+
+          .image {
+              width: 100% !important;
+              min-height: 350px !important; /* Ajusta la altura mínima para pantallas más pequeñas */
+              order: -1 !important; /* Mueve la imagen al inicio en pantallas pequeñas */
+          }
+
+          .text {
+              width: 100% !important;
+              padding: 20px !important; /* Reduce el padding para pantallas más pequeñas */
+          }
+      }
+  </style>
 
     <div class="site-section">
       <div class="container">
@@ -253,7 +272,7 @@
           <div class="col-lg-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">Sobre BDSB</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+              <p>Barrancas de San Benito, un barrio privado que combina la serenidad de la naturaleza con vistas impresionantes al atardecer, ubicado cerca del mar en un entorno tranquilo, ideal para disfrutar de una vida plena y armoniosa.</p>
             </div>
            
           </div>
@@ -276,6 +295,7 @@
                   <li><a href="#">Propietario</a></li>
                 </ul>
               </div>
+              
             </div>
 
             <div class="row">
